@@ -145,7 +145,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.yyds.crm.CrmApplication</mainClass>
+                    <mainClass>com.ziqi.web.WebApplication</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>
