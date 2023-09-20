@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ziqi.web.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.ziqi.web.entity.User">
+        <id column="id" property="id"/>
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="realname" jdbcType="VARCHAR" property="realname"/>
+        <result column="password" jdbcType="INTEGER" property="password"/>
+        <result column="IDcard" jdbcType="INTEGER" property="IDcard"/>
+        <result column="phone" jdbcType="INTEGER" property="phone"/>
+        <result column="email" jdbcType="INTEGER" property="email"/>
+        <result column="paypwd" jdbcType="INTEGER" property="paypwd"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="reputation" jdbcType="INTEGER" property="reputation"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, username, realname, password, IDcard, phone, email, paypwd, status, reputation
+    </sql>
+
+    <select id="selectAllUser" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from user
+    </select>
+
+</mapper>
