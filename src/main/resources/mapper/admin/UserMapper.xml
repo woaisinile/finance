@@ -26,4 +26,8 @@
         from user
     </select>
 
+    <delete id="deleteUserById">
+        delete from user where id = #{id}
+    </delete>
+
 </mapper>

@@ -24,4 +24,10 @@ public class UserController {
         List<User> allUser = userService.qryAllUser(qryObj);
        return Result.ok(allUser);
     }
+
+    @PostMapping("/deleteUserById")
+    public Result deleteUserById(@RequestBody Map<String, Object> qryObj){
+        Integer deleteCount = userService.deleteUserById((Map<String, Object>) qryObj.get("params"));
+        return Result.ok(deleteCount);
+    }
 }

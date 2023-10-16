@@ -11,4 +11,6 @@ import java.util.Map;
 @Repository
 public interface UserMapper {
     List<User> selectAllUser(Map<String, Object> qryObj);
+
+    Integer deleteUserById(Map<String, Object> qryObj);
 }

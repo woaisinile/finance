@@ -7,4 +7,6 @@ import java.util.Map;
 
 public interface UserService {
     List<User> qryAllUser(Map<String, Object> qryObj);
+
+    Integer deleteUserById(Map<String, Object> qryObj);
 }

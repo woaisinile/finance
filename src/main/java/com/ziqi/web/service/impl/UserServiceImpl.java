@@ -19,4 +19,9 @@ public class UserServiceImpl implements UserService {
     public List<User> qryAllUser(Map<String, Object> qryObj) {
         return userMapper.selectAllUser(qryObj);
     }
+
+    @Override
+    public Integer deleteUserById(Map<String, Object> qryObj) {
+        return userMapper.deleteUserById(qryObj);
+    }
 }
