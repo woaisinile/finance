@@ -30,4 +30,14 @@ public class UserController {
         Integer deleteCount = userService.deleteUserById((Map<String, Object>) qryObj.get("params"));
         return Result.ok(deleteCount);
     }
+
+    @PostMapping("/updateUserById")
+    public Result updateUserById(@RequestBody Map<String, Object> qryObj){
+        Integer updateCount = userService.updateUserById((Map<String, Object>) qryObj.get("params"));
+        if (updateCount > 0){
+            return Result.ok(updateCount);
+        } else {
+            return Result.fail("更新错误");
+        }
+    }
 }

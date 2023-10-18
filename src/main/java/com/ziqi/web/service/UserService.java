@@ -9,4 +9,6 @@ public interface UserService {
     List<User> qryAllUser(Map<String, Object> qryObj);
 
     Integer deleteUserById(Map<String, Object> qryObj);
+
+    Integer updateUserById(Map<String, Object> params);
 }

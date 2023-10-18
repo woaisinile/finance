@@ -24,4 +24,9 @@ public class UserServiceImpl implements UserService {
     public Integer deleteUserById(Map<String, Object> qryObj) {
         return userMapper.deleteUserById(qryObj);
     }
+
+    @Override
+    public Integer updateUserById(Map<String, Object> params) {
+        return userMapper.updateUserById(params);
+    }
 }
